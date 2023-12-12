@@ -5,8 +5,13 @@
     padding-top: 100px;
 
     .resultNotFound {
-        font-size: 24px;
+        font-size: 20px;
         color: var(--black-light);
+
+        @include md {
+            font-size: 45px;
+
+        }
     }
 
     .pageTitle {
@@ -30,6 +35,30 @@
             .posterBlock {
                 margin-bottom: 20px;
             }
+        }
+    }
+}
+
+
+.no-result {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+        img {
+            width: 80%;
+            height: 100%;
+        }
+
+
+        img {
+            width: 70%;
+            height: 90%;
+
         }
     }
 }

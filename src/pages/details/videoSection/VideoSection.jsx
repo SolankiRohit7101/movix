@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import PlayBtn from "../PlayBtn";
 import VideoPopup from "../../../components/VideoPopUp/VideoPopUp";

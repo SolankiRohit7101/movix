@@ -38,7 +38,7 @@ const SearchResult = () => {
   };
 
   useEffect(() => {
-    setPageNo(1)
+    setPageNo(1);
     fetchInitialData();
   }, [query]);
   return (
@@ -59,7 +59,7 @@ const SearchResult = () => {
                 dataLength={data?.results.length || []}
                 next={fetchNectPageData}
                 hasMore={pageNo <= data?.total_pages}
-                loader={Spinner()}
+                loader={<Spinner />}
               >
                 {data.results.map((item, index) => {
                   if (item.media_type === "person") return;
@@ -71,7 +71,10 @@ const SearchResult = () => {
               </InfiniteScroll>
             </>
           ) : (
-            <span className="resultNotFound">Sorry Result Not Found </span>
+            <div className="no-result">
+              <span className="resultNotFound">Sorry Result Not Found </span>
+              <img src={noResult} alt="" width={500} height={500} />
+            </div>
           )}
         </ContentWrapper>
       )}
